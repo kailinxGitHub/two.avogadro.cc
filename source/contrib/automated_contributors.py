@@ -39,7 +39,7 @@ with open("contributors.md", "w") as contributors_file:
                 if user is not None and user.name is not None:
                     contributors_file.write(f"- [{user.name}]({user.html_url})\n")
                 else:
-                    contributors_file.write(f"- {username}\n")
+                    contributors_file.write(f"- [{username}](https://github.com/{username})\n")
                 unique_contributors.add(username)
 
 print("Contributors have been updated in contributors.md")
